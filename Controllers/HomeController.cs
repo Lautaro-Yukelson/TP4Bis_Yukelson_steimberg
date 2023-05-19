@@ -16,11 +16,13 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewBag.ListaPaises = Info.ListarPaises();
+        ViewBag.cant = Info.CantPaises();
         return View();
     }
 
-    public IActionResult DetallePais()
+    public IActionResult DetallePais(int idPais)
     {
+        ViewBag.Pais = Info.DetallePais(idPais);
         return View();
     }
 

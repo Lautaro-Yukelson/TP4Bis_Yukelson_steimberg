@@ -8,6 +8,7 @@ namespace TP4Bis_Yukelson_steimberg.Models
     public class Info
     {
         private static List<Pais> ListaPaises { get; set; } = new List<Pais>();
+
         private static void IniciarLista(){
             ListaPaises.Add(new Pais(Pais.agregarId(), "Argentina", "argentina.webp", 45810000, DateTime.Parse("09/07/1810"), "Cataratas del Iguazú"));
             ListaPaises.Add(new Pais(Pais.agregarId(), "España", "espana.webp", 46733038, DateTime.Parse("12/10/1492"), "La Alhambra"));
@@ -19,12 +20,19 @@ namespace TP4Bis_Yukelson_steimberg.Models
         }
 
         public static List<Pais> ListarPaises(){
-            if (ListaPaises.Count() <= 0) {IniciarLista();}
+            if (!(ListaPaises.Count() != null)) {
+                IniciarLista();
+                
+            }
             return ListaPaises;
         }
 
         public static Pais DetallePais(int id){
             return ListaPaises[id-1];
+        }
+
+        public static int CantPaises(){
+            return ListaPaises.Count();
         }
     }
 }

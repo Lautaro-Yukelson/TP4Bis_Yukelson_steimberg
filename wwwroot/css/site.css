@@ -20,3 +20,32 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* -----------------------------------------------------------------------------------------------------*/
+
+.form-crear {
+  width: 100%;
+}
+
+.completables{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -----------------------------------------------------------------------------------------------------*/
+
+.table{
+  margin-top: 15px;
+  border: solid 1px black;
+}
+
+.imagenTabla{
+  height: 100px;
+  width: auto;
+}
+
+.select {
+  border: 5px solid;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
