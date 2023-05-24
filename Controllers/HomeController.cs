@@ -22,6 +22,7 @@ public class HomeController : Controller
 
     public IActionResult DetallePais(int idPais)
     {
+        ViewBag.id = idPais;
         ViewBag.Pais = Info.DetallePais(idPais);
         return View();
     }

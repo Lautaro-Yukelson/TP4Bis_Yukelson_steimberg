@@ -32,20 +32,15 @@ body {
   justify-content: space-between;
 }
 
+button, .contenedor-imagen{
+  border: none;
+}
+
+.text-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* -----------------------------------------------------------------------------------------------------*/
-
-.table{
-  margin-top: 15px;
-  border: solid 1px black;
-}
-
-.imagenTabla{
-  height: 100px;
-  width: auto;
-}
-
-.select {
-  border: 5px solid;
-  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-  animation: borderRotate var(--d) linear infinite forwards;
-}

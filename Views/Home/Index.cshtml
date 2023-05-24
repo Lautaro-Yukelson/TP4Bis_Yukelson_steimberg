@@ -3,20 +3,29 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Inicio</h1>
-    <p>Clickea un pais para ir a sus detalles</p>
-    <form action="DetallePais" method="post" class="form-crear text-center" name="creador">
+    <h1 class="display-4">Paises</h1>
+    <p>Clickea la bandera de un pais para ir a sus detalles</p>
+    <form action="Home/DetallePais" method="post" class="form-crear text-center" name="creador">
         <input type="text" class="form-control" name="idPais" placeholder="idPais" required id="idPais" hidden>
         <table class="table">
             <tbody>
                 <tr>
                     @for (int i = 0; i < @ViewBag.cant; i++) {
+                        string direcBandera = "../../images/" + @ViewBag.ListaPaises[i].imgBandera;
                         <td class="contenedor-imagen">
-                           <p>HOLA</p>
+                           <button onclick="setearFoto(event)" type="submit">
+                            <div class="card">
+                                <img class="card-img-top" height="90px" src="@Html.Raw(direcBandera)" alt="Card image cap" id="@Html.Raw(i)">
+                                <div class="card-body">
+                                    <h5 class="card-title">@ViewBag.ListaPaises[i].Nombre</h5>
+                                </div>
+                            </div>
+                           </button>
                         </td>
-                    }  
+                    }
                 </tr>
             </tbody>
         </table>
     </form>
+
 </div>

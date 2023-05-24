@@ -3,6 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">DETALLES</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Detalles</h1>
+    <div class="card" style="width: 18rem;">
+        <img src="/images/@ViewBag.Pais.imgBandera" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@ViewBag.Pais.Nombre</h5>
+            <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Poblacion: </b>@ViewBag.Pais.Poblacion</li>
+            <li class="list-group-item"><b>Fecha de Indpendencia: </b>@(((DateTime)ViewBag.Pais.FechaIndependencia).ToShortDateString())</li>
+            <li class="list-group-item"><b>Atractivos Turisticos: </b>@ViewBag.Pais.AtractivosTuristicos</li>
+        </ul>
+    </div>
 </div>
